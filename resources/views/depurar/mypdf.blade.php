@@ -51,9 +51,8 @@ $itensP = Checklist::where('id',$id1)->get();
   <tbody>
     <tr>
       <td colspan="5"><b>ID</b> :{{$t->id }} <br>
-    <b>Data da Solicitacao:</b>{{$t->preenchimento }} <br>
-    <b> Hora da Solicitação:</b> {{$t->horaPreenchimento }} <br>
-    <b> Nome: </b>{{$t->nome }}<br>
+      <b>Mês:</b>{{$t->mes }} <br>
+      <b>Login </b> {{$t->login }}<br>
     </td>
     </tr>
   </tbody>
@@ -63,17 +62,13 @@ $itensP = Checklist::where('id',$id1)->get();
   <table class="table table-bordered">
   <tbody>
     <tr>
-      <td><b>Mês:</b>{{$t->mes }} <br>
+      <td>
           <b>Macro:</b>{{$t->macro }}<br>
            <b>Fila: </b> {{$t->Fila_unidadeHospitalar }}<br>
            <b>Unidade Hospitalar desejada:</b>{{$t->unidade_hospitalarDesejada }}<br>
            <b>obs:</b>{{$t->obs }}<br>
            <b>Data Informação Depuação: </b> {{$t->dataInformacao_Depuracao }}<br>
-      </td>
-     <td>
-
-    <b>Número de Ligações : </b> {{$t->nligacoes }}<br>
-    <b>Login </b> {{$t->login }}<br>
+           <b>Número de Ligações : </b> {{$t->nligacoes }}<br>
 
       </td>
    </tr>

@@ -23,9 +23,7 @@ use App\Http\Controllers\PainelController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\BuscaUsuarioController;
 use App\Http\Controllers\ChecklistControllerPDFS;
-
-
-
+use App\Http\Controllers\excluirController;
 
 
 Route::get('/', function () {
@@ -44,6 +42,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('terrestre', TerrestreController::class);
     Route::resource('terrestreadm', TerrestreControlleradm::class);
     Route::resource('checklistadm', ChecklistControlleradm::class);
+    Route::get('excluir/{id}', [excluirController::class, 'index']); 
+
+
 
     Route::resource('aeroadm', AeroControlleradm::class);
     Route::resource('sound', soundController::class);

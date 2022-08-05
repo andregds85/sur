@@ -28,8 +28,8 @@
       <thead>
         <tr>
           <th>PDF</th>
-          <th>mes</th>
-          <th>Apagar</th>
+          <th>Mes</th>
+          <th></th>
          </tr>
       </thead>
 
@@ -39,10 +39,9 @@
             <td>
 
             <a class="btn btn-info" href="{{ url('checklistpdfs',$id=Crypt::encrypt($t->id)) }}">Imprimir PDF</a></td>
-
+            
             <td>{{$t->mes}}</td>
-
-            <td>{{$t->id}}</td>
+            <td><a class="btn btn-danger" href="{{ url('excluir',$id=Crypt::encrypt($t->id)) }}">Excluir</a></td>
         </tr>
         @endforeach 
       </tbody>

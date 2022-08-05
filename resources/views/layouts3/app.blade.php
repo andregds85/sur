@@ -5,7 +5,7 @@
     <title>{{ config('app.name') }}</title>
     <meta charset="utf-8">
     <meta name="language" content="pt-BR">
-    <title>Cerinter SC</title>
+    <title>SUR</title>
     <meta name="description" content="Central de transporte da Secretária de Estado de Saúde do estado de Santa Catarina. Responsável por tranporte de pacientes de uti.">
     <meta name="robots" content="all">
     <meta name="author" content="Secretária de Estado de Saúde de Santa Catarina ">
