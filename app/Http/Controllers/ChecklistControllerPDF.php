@@ -23,14 +23,14 @@ class ChecklistControllerPDF extends Controller
       {
 
       $data = [
-            'title' => 'Checklist Transporte Seguro',
+            'title' => 'Depurador de Filas',
             'date' => date('d/m/Y')
         ];
           
-        $pdf = PDF::loadView('checklistTransporte.mypdf',['id'=>$id]);
+        $pdf = PDF::loadView('depurar.mypdf',['id'=>$id]);
 
     
-        return $pdf->download('ChecklistTransporteSeguro.pdf');
+        return $pdf->download('depurarFilas.pdf');
     }
 
 

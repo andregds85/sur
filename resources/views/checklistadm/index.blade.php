@@ -2,9 +2,9 @@
 @section('content')
 <div class="card mb-3">
   <div class="card-body">
-    <h5 class="card-title">Exportar CheckList em EXCEL</h5>
+    <h5 class="card-title">Exportar em EXCEL</h5>
     <p class="card-text">
-   <a class="nav-link" href="{{url('import_export') }}">Exportar CheckList</a>
+   <a class="nav-link" href="{{url('import_export') }}">Exportar </a>
     </p>
   </div>
 </div>
@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h5>Solicitação CheckList Seguro</h5>
+                <h5>Depurar Filas</h5>
             </div>
           
         </div>

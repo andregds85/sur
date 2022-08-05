@@ -16,7 +16,7 @@
 
 <div><td>Usuário:</td><td> {{Auth::user()->email}}</td> </div>
 <?php $m=Auth::user()->email; ?>
-<?php $itensP = Checklist::where('usuario',$m)->get(); ?> 
+<?php $itensP = Checklist::where('login',$m)->get(); ?> 
 
 
 <!-- DataTales  -->
@@ -28,8 +28,8 @@
       <thead>
         <tr>
           <th>PDF</th>
-          <th>Nome</th>
-          <th>CPF</th>
+          <th>mes</th>
+          <th>Apagar</th>
          </tr>
       </thead>
 
@@ -40,9 +40,9 @@
 
             <a class="btn btn-info" href="{{ url('checklistpdfs',$id=Crypt::encrypt($t->id)) }}">Imprimir PDF</a></td>
 
-            <td>{{$t->nome}}</td>
+            <td>{{$t->mes}}</td>
 
-            <td>{{$t->cpf}}</td>
+            <td>{{$t->id}}</td>
         </tr>
         @endforeach 
       </tbody>
@@ -55,7 +55,7 @@
 
 
 
-<p class="text-center text-primary"><small>CheckList Seguro</small></p>
+<p class="text-center text-primary"><small>sur</small></p>
 @endsection
 
 

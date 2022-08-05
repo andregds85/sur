@@ -208,7 +208,7 @@
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
       <thead>
         <tr>
-          <th>Painel de Solicitações de Checklist Transporte Seguro</th>
+          <th>Painel de Filas Enviadas</th>
        
  
         </tr>
@@ -242,7 +242,7 @@
 
 <div class="col-md-3 col-sm-6">
 
-        <div >Total de Solicitações de Checklist Transporte Seguro</div>  
+        <div >Total de Filas Enviadas</div>  
 </div>
 
 
