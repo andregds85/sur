@@ -9,7 +9,7 @@ use App\Models\Checklist;
 
 
 $tabela = Checklist::all();
-$tabela = Checklist::where('nome', 'LIKE', '%' . $nome . '%')->get();
+$tabela = Checklist::where('mes', 'LIKE', '%' . $nome . '%')->get();
 
 
 ?> 
@@ -21,7 +21,7 @@ $tabela = Checklist::where('nome', 'LIKE', '%' . $nome . '%')->get();
       <thead>
         <tr>
          <th>ID</th>
-         <th>Nome / Data</th>
+         <th>mes / macro</th>
          <th>Ação</th>
         </tr>
       </thead>
@@ -30,12 +30,11 @@ $tabela = Checklist::where('nome', 'LIKE', '%' . $nome . '%')->get();
       @foreach ($tabela as $t)
          <tr>
             <td>{{$t->id}}</td>
-            <td>{{$t->nome}}<br>{{$t->created_at}}</td>
+            <td>{{$t->mes}}<br>{{$t->macro}}</td>
 
 
- <td>  <a class="btn btn-info" href="{{ route('checklistadm.show',$t->id) }}">Vizualizar</a>
-
-<a class="btn btn-info" href="{{ url('checklistpdf',$t->id) }}">Imprimir PDF</a></td>
+            <td>
+            <a class="btn btn-info" href="{{ url('checklistpdf',$id=Crypt::encrypt($t->id)) }}">Imprimir PDF</a></td>
         </tr>
         @endforeach 
       </tbody>

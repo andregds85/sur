@@ -64,10 +64,10 @@ $itensP = Checklist::where('id',$id1)->get();
     <tr>
       <td>
           <b>Macro:</b>{{$t->macro }}<br>
-           <b>Fila: </b> {{$t->Fila_unidadeHospitalar }}<br>
-           <b>Unidade Hospitalar desejada:</b>{{$t->unidade_hospitalarDesejada }}<br>
+           <b>FILA EXPORTA /UNIDADE HOSPITALAR: </b> {{$t->Fila_unidadeHospitalar }}<br>
+           <b>Unidade Hospitalar Desejada:</b>{{$t->unidade_hospitalarDesejada }}<br>
            <b>obs:</b>{{$t->obs }}<br>
-           <b>Data Informação Depuação: </b> {{$t->dataInformacao_Depuracao }}<br>
+           <b>Data da Informação / Depuração: </b> {{$t->dataInformacao_Depuracao }}<br>
            <b>Número de Ligações : </b> {{$t->nligacoes }}<br>
 
       </td>

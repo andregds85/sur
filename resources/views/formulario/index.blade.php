@@ -1,7 +1,6 @@
 @extends('layouts3.app')
 @section('content')
 
-
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>Geo City Locator</title>

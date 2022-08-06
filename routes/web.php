@@ -59,7 +59,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('apaga', apagaController::class);
     Route::resource('temporeal', tempoRealController::class);
     Route::resource('sound',soundController::class);
-    Route::resource('minhassolicitacoes',MinhasSolicitacoesController::class);
+    Route::resource('meuformulario',MinhasSolicitacoesController::class);
     Route::get('checklistpdf/{id}', [ChecklistControllerPDF::class, 'index']); 
     Route::get('checklistpdfs/{id}', [ChecklistControllerPDFS::class, 'index']); 
 

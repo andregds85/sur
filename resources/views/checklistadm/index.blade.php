@@ -39,7 +39,7 @@ function valida()
 {
  if(document.regform.p_nome.value=="" || document.regform.p_nome.value.length < 4)
 {
-alert( "Preencha campo Nome da pesquisa corretamente!" );
+alert( "Preencha campo mes da pesquisa corretamente!" );
 regform.p_nome.focus();
 return false;
 }
@@ -53,9 +53,9 @@ return true;
     <form action="{{ url('pesquisar') }}" method="GET" enctype="multipart/form-data" NAME="regform"
     onsubmit="return valida()">
         <div class="form-group">
-            <label for="nome" class="col-sm-1 control-label">Nome</label>
+            <label for="nome" class="col-sm-1 control-label">Mes</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" name="p_nome" value="" id="nome" placeholder="informe o nome">
+                <input type="text" class="form-control" name="p_nome" value="" id="nome" placeholder="informe o mes">
             </div>
             <div class="col-sm-4">
                 <button type="submit" class="btn btn-default">Pesquisar</button>                    
@@ -73,7 +73,7 @@ return true;
       <thead>
         <tr>
          <th>ID</th>
-         <th>Nome / Data</th>
+         <th>mes / macro</th>
          <th>Ação</th>
         </tr>
       </thead>
@@ -82,7 +82,7 @@ return true;
       @foreach ($tabela as $t)
          <tr>
             <td>{{$t->id}}</td>
-            <td>{{$t->nome}}<br>{{$t->created_at}}</td>
+            <td>{{$t->mes}}<br>{{$t->macro}}</td>
  <!--           
   <a class="btn btn-info" href="{{ route('checklistadm.show',$t->id) }}">Vizualizar</a>
 -->
@@ -103,7 +103,7 @@ return true;
 </div>
 
 
-<p class="text-center text-primary"><small>CheckList Seguro</small></p>
+<p class="text-center text-primary"><small>Sur</small></p>
 @endsection
 
 

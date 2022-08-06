@@ -31,7 +31,7 @@ class Import_Export_Controller extends Controller
     }
     public function export()
     {
-        return Excel::download(new ExportUsers, 'CheckList_Seguro.xlsx');
+        return Excel::download(new ExportUsers, 'depurar_fila_cirurgica.xlsx');
     }
 
     public function import()

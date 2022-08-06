@@ -8,12 +8,7 @@
 <meta charset="utf-8">
     <meta name="language" content="pt-BR">
     <title>SUR</title>
-    <meta name="description" content="Central de transporte da Secretária de Estado de Saúde do estado de Santa Catarina. Responsável por tranporte de pacientes de uti.">
-    <meta name="robots" content="all">
-    <meta name="author" content="Secretária de Estado de Saúde de Santa Catarina ">
-    <meta name="keywords" content="Cerinter, Cerinter SC, CerinterSC, Central de Transporte, Central de Transporte SC, central de Transferencia, Central de Tranferencia SC, Transferencia SC, transferencia, transporte sc, transporte, ses sc, ses, secretaria de estado de saúde de santa catarina, secretaria de estado de saúde sc">
-
-    <meta property="og:type" content="page">
+   
     <meta charset="UTF-8">
     <title>{{ config('app.name') }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -84,7 +79,7 @@
     <!-- Main Footer -->
     <footer class="main-footer">
        
-    <strong>Cerinter @ Secretaria de Estado da Saúde  &copy; <?php echo '20'. $hoje=date('y'); ?> 
+    <strong>Sur @ Secretaria de Estado da Saúde  &copy; <?php echo '20'. $hoje=date('y'); ?> 
     </footer>
 </div>
 
