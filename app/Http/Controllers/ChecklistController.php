@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Checklist;
+use App\Models\checklist;
 use Illuminate\Http\Request;
+use App\Url;
+
 
 class ChecklistController  extends Controller
 {
@@ -18,10 +20,35 @@ class ChecklistController  extends Controller
 
         
     public function index()
-    {
+
+
+
+    {       Checklist::all();
             return view('depurar.index');
     }
-   
+
+
+        
+   public function editar($id)
+    {
+   return view ('depurar.alterar',['id'=>$id]);
+    }
+ 
+
+    public function update(Request $request, checklist $checklist)
+    {
+         request()->validate([
+        
+           ]);
+           
+    $checklist->update($request->all());
+    return redirect()->route('depurar.index')
+                        ->with('Sucesso','Paciente Atualizado com Sucesso');
+    }   
+
+
+
+
    
     public function store(Request $request)
     {

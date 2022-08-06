@@ -42,6 +42,8 @@
             
             <td>{{$t->mes}}</td>
             <td><a class="btn btn-danger" href="{{ url('excluir',$id=Crypt::encrypt($t->id)) }}">Excluir</a></td>
+            <td><a class="btn btn-danger" href="{{ url('alterar',$id=Crypt::encrypt($t->id)) }}">Alterar</a></td>
+
         </tr>
         @endforeach 
       </tbody>

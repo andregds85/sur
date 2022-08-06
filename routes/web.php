@@ -43,7 +43,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('terrestreadm', TerrestreControlleradm::class);
     Route::resource('checklistadm', ChecklistControlleradm::class);
     Route::get('excluir/{id}', [excluirController::class, 'index']); 
-
+    Route::get('alterar/{id}', [ChecklistController::class, 'editar']); 
+    
 
 
     Route::resource('aeroadm', AeroControlleradm::class);
@@ -63,8 +64,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('checklistpdf/{id}', [ChecklistControllerPDF::class, 'index']); 
     Route::get('checklistpdfs/{id}', [ChecklistControllerPDFS::class, 'index']); 
 
- 
-        
+       
     Route::get('pdf', [TerrestreControllerPDF::class, 'generatePDF']); 
     Route::get('aereoPdf', [aerioControllerPDF::class, 'generatePDF']); 
 
