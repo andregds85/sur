@@ -16,6 +16,5 @@ Cria um commit com uma mensagem
 
 git commit -m "Alterando campo text para check box"
 
-
 git push -u origin master
 git push --force origin main

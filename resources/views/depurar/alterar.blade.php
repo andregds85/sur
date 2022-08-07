@@ -1,9 +1,14 @@
 @extends('limpo.app')
 @section('content')
-<?php 
+<?php session_start();
+
 
 $id1=Crypt::decrypt($id);
-echo $id1;
+
+$id1;
+$_SESSION["id"]=$id1;
+
+
 
 use App\Models\Checklist;
 use App\Http\Controllers\ChecklistController;
@@ -19,8 +24,8 @@ $itensP = checklist::where('id',$id1)->get();
             <div class="card">
                 <div class="card-header">{{ __('DEPURAÇÃO DA FILA CIRÚRGICA ') }}</div>
                 <div class="card-body">
-                <form  method="POST">
- 
+                <form action="{{ url('update') }}" method="GET" id="validate" enctype="multipart/form-data" NAME="regform"
+    onsubmit="return valida()"> 
 @csrf
 
 {{ Auth::user()->name}}
@@ -85,7 +90,7 @@ $itensP = checklist::where('id',$id1)->get();
                             <option value="nordeste">Nordeste / Planalto Norte</option>
                             <option value="serra">Serra</option>
                             <option value="grandeOeste">Grande Oeste</option>
-                            <option value="itajai">Vale do itajai</option>
+                            <option value="valeItajai">Vale do itajai</option>
                             </select>    
                             </div>
                         </div>
@@ -193,7 +198,7 @@ $itensP = checklist::where('id',$id1)->get();
                             <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Registrar') }}
+                                    {{ __('Atualizar') }}
                                 </button>
                             </div>
                         </div>

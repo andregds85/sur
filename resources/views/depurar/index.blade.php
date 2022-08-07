@@ -80,7 +80,7 @@ use App\Http\Controllers\ChecklistController;
                             <option value="nordeste">Nordeste / Planalto Norte</option>
                             <option value="serra">Serra</option>
                             <option value="grandeOeste">Grande Oeste</option>
-                            <option value="itajai">Vale do itajai</option>
+                            <option value="valeItajai">Vale do itajai</option>
                             </select>    
                             </div>
                         </div>

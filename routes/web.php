@@ -24,6 +24,7 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\BuscaUsuarioController;
 use App\Http\Controllers\ChecklistControllerPDFS;
 use App\Http\Controllers\excluirController;
+use App\Http\Controllers\updateDController;
 
 
 Route::get('/', function () {
@@ -40,12 +41,13 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('users', UserController::class);
     Route::resource('formulario', SolicitanteController::class);
     Route::resource('terrestre', TerrestreController::class);
+    Route::resource('update', updateDController::class);
+
     Route::resource('terrestreadm', TerrestreControlleradm::class);
     Route::resource('checklistadm', ChecklistControlleradm::class);
     Route::get('excluir/{id}', [excluirController::class, 'index']); 
     Route::get('alterar/{id}', [ChecklistController::class, 'editar']); 
     
-
 
     Route::resource('aeroadm', AeroControlleradm::class);
     Route::resource('sound', soundController::class);
@@ -54,7 +56,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('pesquisar',ProdutoController::class);
     Route::resource('buscaUsuario',BuscaUsuarioController::class);
 
- 
     Route::resource('sucesso', MonitoramentoController::class);
     Route::resource('aerio', aerioController::class);
     Route::resource('apaga', apagaController::class);
@@ -70,7 +71,6 @@ Route::group(['middleware' => ['auth']], function() {
 
     
     Route::resource('manual', ManualController::class);
-  
     Route::get('import_exportpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@importExport');
     Route::post('importpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@import');
     Route::get('exportpacie', 'App\Http\Controllers\Import_Export_ControllerPacie@export');
