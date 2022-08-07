@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\checklist;
+use App\Models\Checklist;
 use Illuminate\Http\Request;
 use App\Url;
 
@@ -23,7 +23,7 @@ class ChecklistController  extends Controller
 
 
 
-    {       Checklist::all();
+    {       
             return view('depurar.index');
     }
 
@@ -35,19 +35,6 @@ class ChecklistController  extends Controller
     }
  
 
-    public function update(Request $request, checklist $checklist)
-    {
-         request()->validate([
-        
-           ]);
-           
-    $checklist->update($request->all());
-    return redirect()->route('depurar.index')
-                        ->with('Sucesso','Paciente Atualizado com Sucesso');
-    }   
-
-
-
 
    
     public function store(Request $request)
@@ -55,7 +42,7 @@ class ChecklistController  extends Controller
         request()->validate([
                
         ]);    
-        Checklist::create($request->all());
+        checklist::create($request->all());
         echo  "<script>
         alert( 'Sucesso, Cadastro efetuado com Sucesso !' );
              </script>";

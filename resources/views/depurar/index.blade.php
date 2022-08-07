@@ -124,7 +124,7 @@ use App\Http\Controllers\ChecklistController;
                         <div class="form-group row" required>
                             <label for="sexo" class="col-md-4 col-form-label text-md-right">{{ __('obs') }}</label>
                             <div class="col-md-6">
-                            <select id="macro" class="form-control" name="macro">
+                            <select id="macro" class="form-control" name="obs">
                             <option selected></option>
                             <option value="1-Óbito">1 - Óbito </option>
                             <option value="2-Já realizou"> 2-Já realizou</option>
